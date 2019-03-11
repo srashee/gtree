@@ -11,3 +11,6 @@ gtree SHA1 SHA2 - Look at tree of SHA1 commit compared to SHA2 commit
 
 ## Installation
 add gtree to path
+
+## Manual
+man ./gtree.1
