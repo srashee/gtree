@@ -2,7 +2,7 @@
 #
 # gtree - git tree
 
-
+# don't even need to do this
 setCommits() {
     # if you're in a git repo
     # get the current commit ID
@@ -12,7 +12,14 @@ setCommits() {
     else
         exit 0
     fi
+}
 
+findChanges() {
+    git --no-pager diff --name-only HEAD HEAD^
+}
+
+parseTree() {
+    tree
 }
 
 main() {
@@ -25,6 +32,8 @@ main() {
         echo "tree isn't installed, install it and run again"
         exit 0
     fi
+    findChanges
+    parseTree
 }
 
 main "$@"
