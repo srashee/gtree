@@ -9,6 +9,9 @@ gtree SHA1 - Look at tree of current commit and SHA1 commit
 
 gtree SHA1 SHA2 - Look at tree of SHA1 commit compared to SHA2 commit
 
+## Dependencies
+tree
+
 ## Installation
 add gtree to path
 
