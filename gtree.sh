@@ -15,11 +15,11 @@ setCommits() {
 }
 
 findChanges() {
-    git --no-pager diff --name-only HEAD HEAD^
+    changes=$(git --no-pager diff --name-only HEAD HEAD^)
 }
 
 parseTree() {
-    tree
+    print $changes
 }
 
 main() {
