@@ -2,6 +2,16 @@
 #
 # gtree - git tree
 
+initHeader() {
+	cat <<EOF
+###########
+# gtree
+#
+# tree integration with git
+###########
+EOF
+}
+
 # don't even need to do this
 setCommits() {
     # if you're in a git repo
@@ -23,6 +33,7 @@ parseTree() {
 }
 
 main() {
+    initHeader
     setCommits
     # if the tree command exists
     if command -v tree &>/dev/null; then
